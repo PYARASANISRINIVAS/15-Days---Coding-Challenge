@@ -2,7 +2,7 @@ Problem link :- https://www.hackerrank.com/contests/smart-interviews-basic/chall
 
 Solution :- 1
 Language:- JAVA
-Description :- 
+Description :- iterating through the loop twice and find the dulpicate value using the temp variable.
 
 Code :- 
 
