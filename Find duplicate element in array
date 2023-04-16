@@ -1,0 +1,56 @@
+Problem link :- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-find-duplicate-element-in-array/submissions/code/1359973864
+
+Solution :- 1
+Language:- JAVA
+Description :- 
+
+Code :- 
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<size;i++){
+            int temp=0;
+            for(int j=i+1;j<size;j++){
+                if(arr[i]==arr[j] &&i!=j)
+                    temp=1;
+            }
+            if(temp==1)
+                System.out.print(arr[i]+" ");
+        }
+        
+    }
+}
+
+Complexity :- O(N*N),O(1)
+
+--------------------------------------------------------------------------------------------------------
+
+Solution :- 2
+Language:- JAVA
+Description :-  Using the HashSet while taking the input and print the value
+
+Code :- 
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        HashSet<Integer> set=new HashSet<>();
+        for(int i=0;i<size;i++){
+            int x=sc.nextInt();
+            if(!set.contains(x))
+                set.add(x);
+            else
+                System.out.print(x+" ");
+        }
+        
+    }
+}
+
+Complexity:- O(N),O(1)
