@@ -1,0 +1,62 @@
+Problem Link :- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-the-missing-number
+
+
+Solution :- 1
+Language :- Java
+Description :-  (BruteForce) Iterating through the arrasy from 1 to 99 and finding the missing number
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int arr[]=new int[99];
+        for(int i=0;i<99;i++){
+            arr[i]=sc.nextInt();
+        }
+        Arrays.sort(arr);
+        int i;
+        for(i=0;i<99;i++){
+            if((i+1)!=arr[i])
+                break;
+        }
+        System.out.println(i+1);
+    }
+}
+
+Complexity :- O(NlogN + N),O(1)
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution :- 2
+Language :- Java
+Description:-   using the binary search sorting + binarySearch
+
+Code :-
+
+public class Solution {
+    public static int binarySearch(int[] arr,int low,int high){
+        int mid=(low+high)/2;
+        if(low==high)
+           return low+1;
+        
+        if((mid+1)==arr[mid]){
+            return binarySearch(arr,mid+1,high);
+        }
+        else{
+            return binarySearch(arr,low,mid);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int arr[]=new int[99];
+        for(int i=0;i<99;i++){
+            arr[i]=sc.nextInt();
+        }
+        Arrays.sort(arr);
+        
+        System.out.println(binarySearch(arr,0,arr.length-1));
+    }
+}
+
+Complexity :- O(NlogN + logN),O(1).

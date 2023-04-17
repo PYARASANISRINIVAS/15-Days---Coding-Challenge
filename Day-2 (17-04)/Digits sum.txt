@@ -1,0 +1,98 @@
+
+Problem Link:- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-digits-sum
+
+Solution :- 1
+Language :- Java
+Description:-This code will not work for given constrains 10e3 we can not store the integer value of that length.
+
+Code:- (WRONG SOLUTION fails for some cases )
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        long value=sc.nextLong();
+        long sum=0;
+        while(value>0){
+            int rem=value%10;
+            sum+=rem;
+            value=value/10;
+            
+        }
+        System.out.println(sum);
+    }
+}
+
+Complexity :- O(N),O(1)
+--------------------------------------------------------------------------------------------------------------
+
+Solution :- 2
+Language :- Java
+Description:- Storing in the String iterating through the length and add with the help of unic code my converting
+                them in to base values
+                --used type convertion 
+
+Code:-
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.next();
+        int sum=0;
+        for(int i=0;i<str.length();i++){
+            sum+=(int)(str.charAt(i)-'0');
+            
+        }
+        System.out.println(sum);
+    }
+}
+
+Complexity :- O(N),O(1)
+
+-----------------------------------------------------------------------------------------------------------------
+
+Solution :- 3
+Language :- Java
+Description:- Storing in the String iterating through the length and add with the help of unic code my converting
+                them in to base values.
+                --used inbuilt valueOf() function.
+
+Code:-
+
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.next();
+        int sum=0;
+        for(int i=0;i<str.length();i++){
+            // String value=(string)(str.charAt(i));
+            sum+=Integer.valueOf(str.charAt(i)-'0');
+            
+        }
+        System.out.println(sum);
+    }
+}
+
+Complexity :- O(N),O(1)
+
+-----------------------------------------------------------------------------------------------------------------
+
+Solution :- 3
+Language :- C
+Description:- Same approach in c Language.
+
+Code:-
+
+int main() {
+    char a[1000];
+    int sum=0;
+    scanf("%s",a);
+   for(int i=0;a[i]!='\0';i++){
+       sum=sum+(a[i]-48);
+   }
+   printf("%d",sum);
+   return 0;
+}
+
+Complexity :- O(N),O(1)

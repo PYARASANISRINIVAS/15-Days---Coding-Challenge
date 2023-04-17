@@ -1,0 +1,58 @@
+Problem Link:- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-compute-a-power-b
+
+Solution :- 1
+Language :- Java
+Description:- BruteForce
+
+Code:-
+
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        long sol=1;;
+        for(int i=0;i<b;i++){
+            sol=a*sol;
+        }
+        System.out.println(sol);
+    }
+}
+
+Complexity :-O(N),O(1).
+
+-------------------------------------------------------------------------------------------------------------
+
+Solution :- 2
+Language :- Java
+Description:- Bit Manipulation
+
+Code:-
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt(); 
+        int n=1000000007;       
+        while(t-->0){
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+            long x=a;
+            long  ans=1;
+                while(b>0){
+                   if((b&1)==1){
+                        ans=((ans%n)*(x%n))%n;
+                   }
+                    x=((x%n)*(x%n))%n;
+                    b=b>>1;
+                }
+            System.out.println(ans%n);
+       }
+    }
+        
+}
+Complexity:- O(32),O(1).
+
+

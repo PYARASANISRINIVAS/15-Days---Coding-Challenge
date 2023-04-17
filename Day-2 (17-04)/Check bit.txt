@@ -1,0 +1,41 @@
+Problem Link :- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-check-bit
+
+Solution :- 1
+Language :- Java
+Description:- shifting the bits of value towards left given position times and checking it bit or not.
+
+Code:-
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int value=sc.nextInt();
+        int bit_pos=sc.nextInt();
+        if(((value>>bit_pos)&1)==1)
+            System.out.println(true);
+        else
+            System.out.println(false);
+    }
+}
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+Solution :- 2
+Language :- Java
+Description:- shifting the '1'  towards right given position times and checking it bit or not by comparing with the given value.
+
+
+Code:-
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int value=sc.nextInt();
+        int bit_pos=sc.nextInt();
+        if(((1<<bit_pos)&value)!=0)
+            System.out.println(true);
+        else
+            System.out.println(false);
+    }
+}
