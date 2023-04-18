@@ -35,4 +35,4 @@ int main(){
     return 0;
 }
 
-Complexity :-O(length(N)),O(1).
+Complexity :-O(length(N)),O(1)
