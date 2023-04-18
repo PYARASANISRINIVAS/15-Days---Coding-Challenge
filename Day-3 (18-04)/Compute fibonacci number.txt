@@ -38,7 +38,7 @@ Complexity :-O(N),O(1)
 
 Solution :- 2
 Language :- Java
-Description:-   using the recursion 
+Description:-   using the recursion.
 
 Code:- 
 
