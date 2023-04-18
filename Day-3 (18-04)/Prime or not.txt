@@ -1,0 +1,58 @@
+
+Problem link:-  https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-prime-or-not
+
+
+
+Solution :- 1
+Language :- Java
+Description:- Iterating through the length and finding the number of times the value is divisible.
+
+Code:-
+
+public class Solution{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        long n=sc.nextLong();
+        int count=0;
+        for(int i=1;i<=n;i++){
+            if(n%i==0)
+                count++;
+        }
+        if(count==2){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+    }
+}
+
+Complexity :- O(N),O(1)
+
+------------------------------------------------------------------------------------------------------------------
+
+Solution :- 2
+Language :- Java
+Description:- iterating from 1 to half of the number beacuse of the repeatition of the checking 
+
+Code:-
+
+public class Solution{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        long n=sc.nextLong();
+        int count=0;
+        for(int i=1;i<=n/2;i++){
+            if(n%i==0)
+                count++;
+        }
+        if(count==2){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+    }
+}
+
+Complexity :- O(N/2),O(1)

@@ -1,0 +1,54 @@
+
+
+Problem Link:- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-compute-n
+
+
+Solution :- 1
+Language :- Java
+Description:- BruteForce
+
+Code:-
+
+
+public class Solution {
+
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int sum=1;
+        for(int i=1;i<=n;i++){
+            sum*=i;
+        }
+        System.out.println(sum);
+    }
+}
+
+Complexity=O(N),O(1)
+
+-------------------------------------------------------------------------------------------------------------
+
+Solution :- 1
+Language :- Java
+Description:- using Recursion
+
+Code:-
+
+
+public class Solution {
+    public static int factorial(int n){
+        if(n==0||n==1)
+            return 1;
+        return factorial(n-1)*n;
+    }
+
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.println(factorial(n));
+    }
+}
+
+------------------------------------------------------------------------------------------------------------
+
+
+

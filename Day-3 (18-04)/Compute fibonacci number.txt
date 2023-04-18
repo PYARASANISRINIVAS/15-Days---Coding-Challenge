@@ -1,0 +1,62 @@
+Problem link:- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-compute-fibonacci-number
+
+
+
+Solution :- 1
+Language :- Java
+Description:- 
+
+Code:- Iterating till n times and finding the value
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a=1;
+        int b=1;
+        if(n==0){
+            System.out.println(0);
+        }
+        else if(n==1||n==2)
+            System.out.println(1);
+        else{
+            while(n-->2){
+                int c=a+b;
+                a=b;
+                b=c;
+            }
+            System.out.println(b);
+            
+        }
+        
+    }
+}
+
+Complexity :-O(N),O(1)
+
+-----------------------------------------------------------------------------------------------------------------
+
+Solution :- 2
+Language :- Java
+Description:-   using the recursion 
+
+Code:- 
+
+
+public class Solution {
+    public static int fibonacci(int n,int a,int b){
+        if(n==0)
+            return 0;
+        if(n==1||n==2)
+            return b;
+        int c=a+b;
+            a=b;
+            b=c;
+        return fibonacci(n-1,a,b);   
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.println(fibonacci(n,1,1));
+    }
+}
