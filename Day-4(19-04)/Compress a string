@@ -1,0 +1,44 @@
+Problem link:- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-compress-a-string
+
+
+Solution :- 1
+Language :- JAVA
+Description :- Using HashMap and StringBuilder
+
+Code:-
+
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        HashMap<Character,Integer> map=new HashMap<>();
+        Scanner sc=new Scanner(System.in);
+        String str=sc.next();
+        StringBuilder ans_str=new StringBuilder("");
+        for(int i=0;i<str.length();i++){
+            char var1=str.charAt(i);
+            if(!map.containsKey(var1)){
+                if(map.size()!=0){
+                    for(char x: map.keySet()){
+                        System.out.print(x);
+                        System.out.print(map.get(x));
+                        map.remove(x);
+                    }
+                }
+                map.put(var1,1);    
+            }
+            else{
+                int temp=map.get(var1);
+                temp++;
+                map.put(var1,temp);
+            }
+        }
+        for(char x: map.keySet()){
+            System.out.print(x);
+            System.out.print(map.get(x));
+            map.remove(x);
+        }         
+    }
+}
+
+Complexity :-O(N),O(1).

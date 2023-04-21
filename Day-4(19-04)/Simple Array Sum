@@ -1,0 +1,17 @@
+problem link:-
+
+
+Solution :- 1
+Language :-Java
+Description:- ArrayList Iteration.
+
+Code:-
+
+public static int simpleArraySum(List<Integer> ar) {
+        int sum=0;
+        for(int x:ar){
+            sum+=x;
+        }
+        return sum;
+}
+Complexity :- O(N),O(1).
