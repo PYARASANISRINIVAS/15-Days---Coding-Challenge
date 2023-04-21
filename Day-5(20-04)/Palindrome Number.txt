@@ -1,0 +1,52 @@
+Problem Link :- https://leetcode.com/problems/palindrome-number/description/
+
+Solution :- 1
+Language :- JAVA
+Description :- Converting  in to the string and checking valid palindrone or not.
+                using toString() method.
+
+Code:-
+
+
+class Solution {
+    public boolean isPalindrome(int x) {
+    String str=Integer.toString(x);
+    int p1=0;
+    int p2=str.length()-1;
+    while(p1<p2){
+        if(str.charAt(p1++)!=str.charAt(p2--))
+            return false;
+    }
+    return true;       
+    }
+}
+
+Complexity :- O(length(N)),O(1)
+--------------------------------------------------------------------------------------------------------
+
+Solution :- 2
+Language :- JAVA
+Description :- reversing the number without converting in to the string.
+
+Code:-
+class Solution {
+    public boolean isPalindrome(int x) {
+        int rev=0,rem;
+        int num=x;
+        boolean flag=true;
+        if(x<0)
+            return false;
+        while(x!=0){
+            rem=x%10;
+            x/=10;
+            rev=rev*10+rem;
+           
+        }
+        if(num!=rev){
+            return false;
+        }
+        return true;
+    }
+}
+
+Complexity :- O(length(N)),O(1).

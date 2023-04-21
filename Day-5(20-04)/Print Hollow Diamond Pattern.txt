@@ -1,0 +1,65 @@
+Problem Link :- https://www.hackerrank.com/contests/smart-interviews/challenges/si-print-hollow-diamond-pattern
+
+Solution :- 1
+Language :- JAVA
+Description :-
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+   public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        int k=t;
+        while(t-->0){
+            System.out.println("Case #"+(k-t)+":");
+            int n=sc.nextInt();
+            for(int i=0;i<n;i++){
+                for(int j=0;j<n;j++){
+                    if(Math.abs(i-j)==(n-1)/2 || (i+j)==(n-1)/2 || i+j==(n-1)+(n-1)/2)
+                        System.out.print("*");
+                    else
+                        System.out.print(" ");
+                }
+                System.out.println();
+            }
+            
+        }
+    }
+}
+
+Complexity:- 
+
+-----------------------------------------------------------------------------------------------------------------
+
+Solution :- 1
+Language :- C
+Description :-
+
+
+Code:-
+#include<stdio.h>
+int main(){
+    int t;
+    scanf("%d",&t);
+    int k=t;
+    while(t--){
+        int n;
+        scanf("%d",&n);
+        printf("Case #%d:\n",k-t);
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(i+j==(n-1)/2||i-j==(n-1)/2 || j-i==(n-1)/2||i+j==(n-1)+(n-1)/2){
+                    printf("*");
+                }
+                else{
+                    printf(" ");
+                }
+            }
+            printf("\n");
+        }
+    }
+    return 0;
+}
+Complexity :- O(N*N),O(1).
