@@ -1,0 +1,77 @@
+Problem Link:-  https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-transpose-matrix
+
+Solution :- 1
+Language :- Java
+Description:-
+
+Code:-
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int row=sc.nextInt();
+        int col=sc.nextInt();
+        int matrix[][]=new int[row][col];
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+                matrix[i][j]=sc.nextInt();
+            }
+        }
+        for(int i=0;i<col;i++){
+            for(int j=0;j<row;j++){
+                System.out.print(matrix[j][i]+" ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------
+
+Solution :- 1
+Language :- C
+Description:-
+
+Code:-
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    long mat1[100][100],tra[100][100],a,b,i,j;
+    scanf("%ld%ld",&a,&b);
+    for(i=0;i<a;i++)
+    {
+        for(j=0;j<b;j++)
+        {
+            scanf("%ld",&mat1[i][j]);
+        }
+    }
+    for(i=0;i<a;i++)
+    {
+        for(j=0;j<b;j++)
+        {
+            tra[j][i]=mat1[i][j];
+        }
+    }
+    for(i=0;i<b;i++)
+    {
+        for(j=0;j<a;j++)
+        {
+            printf("%ld ",tra[i][j]);
+        }
+                    printf("\n");
+
+        
+    }
+    
+}

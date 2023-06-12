@@ -1,0 +1,95 @@
+Problem Link :-  https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-check-armstrong-number
+
+Note: Armstrong number is a number that is equal to the sum of cubes of its digits.
+
+Solution :- 1
+Language :- Java
+Description:- BruteForce
+
+Code:- 
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int sum=0;
+        int num1=num;
+        while(num>0){
+            int rem=num%10;
+            num=num/10;
+            sum+=rem*rem*rem;  
+        }
+        if(sum==num1)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+    }
+}
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+Solution :- 1
+Language :- Java
+Description:- using toString() function.
+
+Code:- 
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int sum=0;
+        String num_str=Integer.toString(num);
+        for(int i=0;i<num_str.length();i++){
+           int x=num_str.charAt(i)-'0';
+            sum+=x*x*x;
+        }
+        if(sum==num)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+    }
+}
+
+------------------------------------------------------------------------------------------------------
+
+Solution :- 1
+Language :- C
+Description:- 
+
+
+Code:-
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+
+    long a,rem,sum=0,n;
+    scanf("%ld",&a);
+    n=a;
+    while(a>0)
+    {
+    rem=a%10;
+    a=a/10;
+    sum=(rem*rem*rem)+sum;
+}
+    if(sum==n)
+        printf("Yes");
+    else
+        printf("No");
+    return 0;
+}

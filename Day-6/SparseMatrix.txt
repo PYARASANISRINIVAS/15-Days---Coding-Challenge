@@ -1,0 +1,76 @@
+Problem link:-  https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-a-sparse-matrix
+Solution :- 1
+Language :- JAVA
+Description :- 
+
+Code:-
+
+
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int row=sc.nextInt();
+        int col=sc.nextInt();
+        int count=0;
+        int matrix[][]=new int[row][col];
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+                matrix[i][j]=sc.nextInt();
+                if(matrix[i][j]==0)
+                    count++;
+            }
+        }
+        if(count>(row*col)/2)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+    }
+}
+
+-----------------------------------------------------------------------------------------
+
+Solution :- 1
+Language :- C
+Description :- 
+
+Code:-
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int a,b,count=0,i,j;
+    scanf("%d%d",&a,&b);
+    long mat1[100][100];
+    for(i=0;i<a;i++)
+    {
+        for(j=0;j<b;j++)
+        {
+            scanf("%ld",&mat1[i][j]);
+        }
+    }
+    for(i=0;i<a;i++)
+    {
+        for(j=0;j<b;j++)
+        {
+            if(mat1[i][j]==0)
+            {
+                count++;
+            }
+        }
+    }
+    if(count>(a*b/2))
+    {
+        printf("Yes");
+    }
+    else{
+        printf("No");
+    }
+    return 0;
+}

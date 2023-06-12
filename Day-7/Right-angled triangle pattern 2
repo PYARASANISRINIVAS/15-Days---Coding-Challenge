@@ -1,0 +1,97 @@
+problem Link:- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-right-angled-triangle-pattern-2
+
+Solution :- 1
+Language :- Java
+Description:-
+
+Code:-
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int matrix[][]=new int[n][n];
+        int temp=1;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(i<=j)
+                    matrix[j][i]=temp++;
+                    
+                    
+                else
+                    matrix[j][i]=-1;
+                    
+                    
+            }
+        }
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(matrix[i][j]>0)
+                    System.out.print(matrix[i][j]+" ");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
+
+
+
+
+
+---------------------------------------------------------------------
+
+Solution :- 1
+Language :- c
+Description:-
+
+Code:-
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    long a,temp=1,i,j;
+    long  b[100][100];
+    scanf("%ld",&a);
+    for(j=0;j<a;j++)
+    {
+        for(i=0;i<a;i++)
+        {
+            if(i>=j)
+            {   
+                b[i][j]=temp;
+                temp++;
+             
+            }
+           /* else
+            {
+                b[i][j]=' ';
+            }*/
+            
+            
+        }
+    }
+        for(i=0;i<a;i++)
+        {
+            for(j=0;j<a;j++)
+            {
+                if(i>=j)
+                printf("%ld ",b[i][j]);
+            }
+            printf("\n");
+        }
+        
+    
+        
+    return 0;
+}

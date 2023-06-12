@@ -1,0 +1,37 @@
+/* opposite column sum of two matrix */
+
+Solution :- 1
+Language :- Java
+Description:-
+
+Code:-
+
+import java.util.*;
+
+public class ColumnSum{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int row=sc.nextInt();
+        int col=sc.nextInt();
+        int matrix1[][]=new int[row][col];
+        int matrix2[][]=new int[row][col];
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+                matrix1[i][j]=sc.nextInt();
+            }
+        }    
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+                matrix2[i][j]=sc.nextInt();
+            }
+        } 
+        for(int i=0;i<col;i++){
+            int sum=0;
+            for(int j=0;j<row;j++){
+                sum+=matrix1[j][i]+matrix2[j][matrix1[0].length-1-i];
+            }
+            System.out.println(sum);
+            sum=0;
+        }   
+    }
+}

@@ -1,0 +1,78 @@
+problem Link:- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-hollow-rectangle-pattern
+
+Solution :- 1
+Language :- java
+Description:-
+
+Code:-
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int col=sc.nextInt();
+        int row=sc.nextInt();
+        
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+                if(i==0||i==row-1||j==0||j==col-1){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+--------------------------------------------------------------------
+
+Solution :- 1
+Language :- c
+Description:-
+
+Code:-
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a,b,i,j,c[100][100];
+    scanf("%d%d",&a,&b);
+
+    for(i=0;i<b;i++)
+    {
+        for(j=0;j<a;j++)
+        {
+            if(i==0||j==0||i==b-1||j==a-1)
+            {   
+                
+                c[i][j]='*';
+            }
+            else
+               c[i][j]=' ';
+        }
+        
+    }
+    for(i=0;i<b;i++)
+    {
+        for(j=0;j<a;j++)
+        {
+            printf("%c",c[i][j]);
+        }
+        printf("\n");
+        
+    }
+    return 0;
+}

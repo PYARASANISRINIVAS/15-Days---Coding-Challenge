@@ -1,0 +1,62 @@
+Problem Link:- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-harshad-number
+
+Note: A Harshad number is an integer, that is divisible by the sum of its digits.
+-------------------------------------------------------------------------------------------------------------------
+
+Solution :- 1
+Language :- Java
+Description:- 
+
+Code:-
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int sum=0;
+        int n=sc.nextInt();
+        String nums_str=Integer.toString(n);
+        for(int i=0;i<nums_str.length();i++){
+            int x=nums_str.charAt(i)-'0';
+            sum+=x;
+        }
+        if(n%sum==0)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+        
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+Solution :- 1
+Language :- C
+Description:- 
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    long a,n,sum=0,rem;
+    scanf("%ld",&a);
+    n=a;
+    while(a>0)
+    {
+        rem=a%10;
+        a=a/10;
+        sum=sum+rem;
+    }
+    if(n%sum==0)
+        printf("Yes");
+    else
+        printf("No");
+    return 0;
+}

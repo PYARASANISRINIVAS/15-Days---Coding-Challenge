@@ -1,0 +1,69 @@
+
+Problem link:- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-right-angled-triangle-pattern-1/problem
+Solution :- 1
+Language :- Java
+Description:- 
+
+Code:-
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int temp=1;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(j<=i){
+                System.out.print(temp+" ");
+                    temp++;
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+complexity:-O(N*N),O(1).
+
+
+-----------------------------------------------------------------------------------------------------
+
+Solution :- 1
+Language :- c
+Description:-
+
+Code:-
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+long a,i,j,b[100][100],temp=0;
+    scanf("%ld",&a);
+    for(i=0;i<a;i++)
+    {
+        for(j=0;j<a;j++)
+        {
+            
+            if(i>=j)
+            {
+                temp++;
+                  b[i][j]=temp;
+                printf("%ld ",b[i][j]);
+                
+            }
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}

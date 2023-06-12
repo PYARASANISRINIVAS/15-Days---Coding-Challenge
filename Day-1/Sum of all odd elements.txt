@@ -1,4 +1,4 @@
-problem link:-https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-sum-of-odd-elements/copy-from/1359973105
+problem link:- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-sum-of-odd-elements/copy-from/1359973105
 
 
 Solution :- 1

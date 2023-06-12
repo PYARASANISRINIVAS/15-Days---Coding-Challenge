@@ -1,0 +1,65 @@
+Solution :- 1
+Language :- Java
+Description:- BruteForce
+
+Code:- 
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int sum=0;
+        for(int i=1;i<=n;i++){
+            sum+=i;
+        }
+        System.out.println(sum);
+    }
+}
+--------------------------------------------------------------------------------------------------------------
+
+Solution :- 2
+Language :- Java
+Description:- Formula Based.
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int sum=n*(n+1)/2;
+        System.out.println(sum);
+    }
+}
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+Solution :- 2
+Language :- C
+Description:- Formula Based.
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    long sum=0;
+    int n;
+    scanf("%d",&n);
+    sum=n*(n+1)/2;
+    printf("%ld",sum);
+    return 0;
+}
+
+
+

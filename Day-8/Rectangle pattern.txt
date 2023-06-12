@@ -1,0 +1,78 @@
+problem link:-  https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-rectangle-pattern
+
+Solution :- 1
+Language :- Java
+Description:-
+
+Code:-
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            int temp=n;
+            for(int j=0;j<n;j++){
+                if((i+j)==n-1){
+                    System.out.print("*");
+                    temp--;
+                }
+                else{
+                   System.out.print(temp--); 
+                }             
+                
+            }
+            System.out.println();
+        }
+    }
+}
+------------------------------------------
+
+Solution :- 1
+Language :- c
+Description:-
+
+Code:-
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    long a,i,j,temp,b[100][100];
+
+    scanf("%ld",&a);
+    temp=a+1;
+    for(j=0;j<a;j++)
+    {
+        temp--;
+        for(i=0;i<a;i++)
+        {   
+            
+           
+                b[i][j]=temp;
+            
+                
+        }
+    }
+    for(i=0;i<a;i++)
+    {
+        for(j=0;j<a;j++)
+        { 
+            if((i+j)==(a-1))
+            printf("*");
+               else
+               printf("%ld",b[i][j]);
+        }
+        printf("\n");
+    }
+        
+    
+    return 0;
+}

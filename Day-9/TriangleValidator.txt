@@ -1,0 +1,57 @@
+Problem Link :- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-triangle-validator
+
+
+
+Solution :- 1
+Language :- Java
+Description:- 
+
+Code:- 
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int first_side=sc.nextInt();
+        int second_side=sc.nextInt();
+        int third_side=sc.nextInt();
+        if( ((first_side+second_side)>third_side) && ((first_side+third_side)>second_side)  && ((second_side+third_side)>first_side) )
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+        
+        
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------
+
+Solution :- 1
+Language :- C
+Description:- 
+
+Code:- 
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    long a,b,c;
+    scanf("%ld%ld%ld",&a,&b,&c);
+    if((a+b)>c&&(a+c)>b&&(b+c)>a)
+    {
+        printf("Yes");
+    }
+    else
+    {
+        printf("No");
+    }
+    return 0;
+}

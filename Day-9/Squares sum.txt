@@ -1,0 +1,51 @@
+
+
+Problem Link:- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-squares-sum
+
+Solution :- 1
+Language :- Java
+Description:- BruteForce
+
+Code:- 
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int sum=0;
+        for(int i=1;i<=n;i++){
+            sum+=(i*i);
+        }
+        System.out.println(sum);
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------
+
+Solution :- 1
+Language :- C
+Description:- BruteForce
+
+Code:- 
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    long a,i,pro=0;
+    scanf("%ld",&a);
+    for(i=1;i<=a;i++)
+    {
+        pro=(i*i)+pro;
+    }
+    printf("%ld",pro);
+    return 0;
+}

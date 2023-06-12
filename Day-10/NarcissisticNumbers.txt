@@ -1,0 +1,81 @@
+problem Link:- https://www.hackerrank.com/contests/smart-interviews-basic/challenges/si-basic-narcissistic-numbers
+
+Note: A narcissistic number is a number that is the sum of its own digits each raised to the power of the number of digits
+
+
+Solution :- 1
+Language :- Java
+Description:- 
+
+code:-
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static int compute(int a,int b){
+        int sol=1;
+        for(int i=1;i<=b;i++){
+            sol*=a;
+        }
+        return sol;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int sum=0;
+        String num_str=Integer.toString(n);
+        int len=num_str.length();
+        for(int i=0;i<num_str.length();i++){
+            int x=num_str.charAt(i)-'0';
+            sum+=compute(x,len);
+        }
+        if(sum==n)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+    }
+}
+
+----------------------------------------------------------------------------------------------------------
+
+Solution :- 1
+Language :- C
+Description:- 
+
+code:-
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    long a,sum=0,rem,n,power=0,b;
+    scanf("%ld",&a);
+    n=a;
+    b=a;
+    while(b>0)
+    {
+        rem=b%10;
+        b=b/10;
+        power++;
+    }
+    while(a>0)
+    {
+        rem=a%10;
+        a=a/10;
+        sum=pow(rem,power)+sum;
+    }
+    if(n==sum)
+    {
+        printf("Yes");
+    }
+    else
+    {
+        printf("No");
+    }
+    return 0;
+}
