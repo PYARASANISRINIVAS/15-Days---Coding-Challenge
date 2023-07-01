@@ -1,0 +1,66 @@
+https://www.hackerrank.com/contests/smart-interviews/challenges/si-sum-of-array-elements
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t-->0){
+            int n=sc.nextInt();
+            long arr[]=new long[n];
+            for(int i=0;i<n;i++){
+                arr[i]=sc.nextLong();
+            }
+            long sum=0;
+            for(long x:arr){
+                sum+=x;
+            }
+            System.out.println(sum);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int t;
+    scanf("%d",&t);
+    while(t--){
+        int n;
+        long sum=0;
+        scanf("%d",&n);
+        while(n--){
+            long x;
+        scanf("%ld",&x);
+        sum=sum+x;
+        }
+        printf("%ld\n",sum);
+    }
+
+    return 0;
+}
