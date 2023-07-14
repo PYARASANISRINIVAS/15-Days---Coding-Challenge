@@ -79,10 +79,32 @@ class SingleLinkedList{
         temp.next=node;
 
         }
-        
-        
-
     }
+    public void insertSorted(int val){
+        Node temp=head;
+        Node node=new Node(val);
+        if(val<temp.data){
+            node.next=temp;
+            head=node;
+        }
+        else{
+            while(temp.next.data<val){
+                temp=temp.next;
+
+            }
+            node.next=temp.next;
+            temp.next=node;
+        }
+    }
+    public void delete(int pos){
+        Node temp=head;
+        while(pos-->1){
+            temp=temp.next;
+        }
+        temp.next=temp.next.next;
+    }
+   
+
 
 }
 
@@ -91,18 +113,28 @@ public class LinkedList {
     public static void main(String[] args){     
         SingleLinkedList list=new SingleLinkedList();
         SingleLinkedList list2=new SingleLinkedList();
-        list.add(3);
+        list2.add(3);
         list2.add(4);
         list2.add(5);
-        list2.print();
+        // list2.print();
         // System.out.println(list2.length());
         // list2.reverse();
         // list2.print();
         System.out.println();
         // list2.printRev(list2.head);
         // list2.reverse();
-        list2.insert(10,2);
+        list2.insert(10,3);
          list2.print();
+         list2.insertSorted(1);
+         System.out.println();
+         list2.print();
+         list2.insertSorted(6);
+         System.out.println();
+         list2.print();
+         list2.delete(2);
+         System.out.println();
+         list2.print();
+         
 
     }
 }

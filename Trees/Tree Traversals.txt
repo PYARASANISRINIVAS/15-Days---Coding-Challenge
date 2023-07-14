@@ -1,0 +1,73 @@
+Problem Link:- https://www.hackerrank.com/contests/smart-interviews/challenges/si-tree-traversals
+
+Solution:- 
+
+import java.io.*;
+import java.util.*;
+class Node{
+        int data;
+        Node left,right;
+        Node(int data){
+            this.data=data;
+        }
+    }
+class BinarySearchTree{
+    public static Node insert(Node root,int data){
+        if(root==null)
+            return new Node(data);
+        else if(data<root.data){
+            root.left=insert(root.left,data);
+        }
+        else{
+            root.right=insert(root.right,data);
+        }
+        return root;
+    }
+    public static void preOrder(Node root){
+        if(root==null)
+            return;
+        System.out.print(root.data+" ");
+        preOrder(root.left);
+        preOrder(root.right);
+        return;
+    }
+    public static void inOrder(Node root){
+        if(root==null)
+            return;
+        inOrder(root.left);
+        System.out.print(root.data+" ");
+        inOrder(root.right);
+        return;
+    }
+    public static void  postOrder(Node root){
+        if(root==null)
+            return;
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.data+" ");
+        return;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {    
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t-->0){
+            int n=sc.nextInt();
+            Node root=null;
+            BinarySearchTree list1=new BinarySearchTree();
+            while(n-->0){
+                int ele=sc.nextInt();
+                root=list1.insert(root,ele);
+            }
+            list1.preOrder(root);
+            System.out.println();
+            list1.inOrder(root);
+            System.out.println();
+            list1.postOrder(root);
+            System.out.println();
+            System.out.println();
+        }    
+    }
+}
